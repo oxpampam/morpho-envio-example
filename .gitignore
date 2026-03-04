@@ -4,7 +4,6 @@
 .env*.local
 
 # Build artifacts
-generated/
 node_modules/
 dist/
 .next/
