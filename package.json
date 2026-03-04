@@ -1,0 +1,16 @@
+{
+  "name": "morpho-curator-dashboard",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "codegen": "envio codegen",
+    "dev": "envio dev",
+    "start": "envio start"
+  },
+  "dependencies": {
+    "generated": "workspace:*"
+  },
+  "devDependencies": {
+    "envio": "2.32.3"
+  }
+}

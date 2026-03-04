@@ -1,0 +1,16 @@
+[
+  {
+    "type": "event",
+    "name": "CreateMetaMorpho",
+    "inputs": [
+      { "name": "metaMorpho",      "type": "address", "indexed": true  },
+      { "name": "caller",          "type": "address", "indexed": true  },
+      { "name": "initialOwner",    "type": "address", "indexed": false },
+      { "name": "initialTimelock", "type": "uint256", "indexed": false },
+      { "name": "asset",           "type": "address", "indexed": true  },
+      { "name": "name",            "type": "string",  "indexed": false },
+      { "name": "symbol",          "type": "string",  "indexed": false },
+      { "name": "salt",            "type": "bytes32", "indexed": false }
+    ]
+  }
+]

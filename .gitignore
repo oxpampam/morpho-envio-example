@@ -1,0 +1,20 @@
+# Environment secrets
+.env
+.env.local
+.env*.local
+
+# Build artifacts
+generated/
+node_modules/
+dist/
+.next/
+
+# Envio local state
+.envio/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Claude Code local settings
+.claude/

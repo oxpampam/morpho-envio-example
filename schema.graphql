@@ -1,0 +1,149 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Morpho Curator Intelligence Dashboard – Entity Schema
+# ─────────────────────────────────────────────────────────────────────────────
+# ID conventions:
+#   Vault        → "{address}-{chainId}"
+#   VaultMarket  → "{vaultId}-{marketId}"
+#   CapChange    → "{txHash}-{logIndex}"
+#   Reallocation → "{txHash}-{logIndex}"
+#   VaultSnapshot→ "{vaultId}-{dayTimestamp}"   (one entry per calendar day)
+#   LPFlow       → "{txHash}-{logIndex}"
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Core vault record ─────────────────────────────────────────────────────────
+type Vault {
+  id: ID!
+
+  address: String!  @index
+  name: String!
+  symbol: String!
+
+  # Underlying ERC-20 accepted by the vault
+  asset: String!    @index
+
+  # On-chain roles (owner == initial owner; curator set separately later)
+  owner: String!    @index
+  curator: String!  @index
+
+  # Live state
+  tvl: BigInt!       # updatedTotalAssets from UpdateLastTotalAssets
+  fee: BigInt!       # 18-decimal fraction; 1e18 == 100 %
+  timelock: BigInt!  # seconds
+
+  # Ordered deposit-priority queue (bytes32 market IDs)
+  supplyQueue: [String!]!
+
+  chainId: Int!  @index
+  createdAt: Int!          # block.timestamp
+  createdTxHash: String!
+
+  # ── Reverse relations ─────────────────────────────────────────────────────
+  markets:       [VaultMarket!]!  @derivedFrom(field: "vault")
+  capChanges:    [CapChange!]!    @derivedFrom(field: "vault")
+  reallocations: [Reallocation!]! @derivedFrom(field: "vault")
+  snapshots:     [VaultSnapshot!]! @derivedFrom(field: "vault")
+  lpFlows:       [LPFlow!]!       @derivedFrom(field: "vault")
+}
+
+# ── Per-vault, per-market allocation state ────────────────────────────────────
+type VaultMarket {
+  id: ID!
+
+  vault: Vault!
+
+  # Morpho market ID — keccak256 hash of (loanToken, collateralToken, oracle, irm, lltv)
+  marketId: String!  @index
+
+  # Current supply cap set by the curator (raw token units)
+  cap: BigInt!
+
+  # Approximate assets currently deployed into this market
+  # (tracked via ReallocateSupply / ReallocateWithdraw deltas)
+  currentAllocation: BigInt!
+
+  # cap utilisation in basis-points: (currentAllocation * 10_000) / cap
+  # 10_000 == 100 %; 0 when cap == 0
+  utilizationBps: BigInt!
+
+  lastUpdated: Int!  # block.timestamp of last change
+}
+
+# ── Cap change history (SET / SUBMIT / REVOKE) ────────────────────────────────
+enum CapChangeType {
+  SET     # SetCap     — cap is now live
+  SUBMIT  # SubmitCap  — pending increase (timelock started)
+  REVOKE  # RevokePendingCap — pending increase cancelled (⚠ red flag)
+}
+
+type CapChange {
+  id: ID!
+
+  vault: Vault!
+
+  marketId: String!  @index
+
+  oldCap: BigInt!
+  newCap: BigInt!
+
+  timestamp: Int!  @index
+  changeType: CapChangeType!
+}
+
+# ── Individual reallocation legs ──────────────────────────────────────────────
+# One record per (ReallocateSupply | ReallocateWithdraw) event.
+# Group by txHash to reconstruct a full multi-market reallocation round-trip.
+enum ReallocationSide {
+  SUPPLY    # assets added to this market
+  WITHDRAW  # assets removed from this market
+}
+
+type Reallocation {
+  id: ID!
+
+  vault: Vault!
+
+  caller: String!   @index  # allocator address
+  marketId: String! @index
+
+  assets: BigInt!  # supplied / withdrawn token units
+  shares: BigInt!  # corresponding vault shares
+
+  side: ReallocationSide!
+
+  timestamp: Int!   @index
+  txHash: String!   @index  # group legs of the same rebalance
+}
+
+# ── Daily TVL snapshots (for time-series charts) ──────────────────────────────
+type VaultSnapshot {
+  id: ID!  # "{vaultId}-{dayTimestamp}"
+
+  vault: Vault!
+
+  totalAssets: BigInt!  # last UpdateLastTotalAssets value seen that day
+  timestamp: Int!       @index  # start-of-UTC-day Unix timestamp
+}
+
+# ── LP deposit / withdrawal flows ─────────────────────────────────────────────
+enum FlowType {
+  DEPOSIT
+  WITHDRAW
+}
+
+type LPFlow {
+  id: ID!
+
+  vault: Vault!
+
+  sender: String!  @index  # msg.sender (router / user)
+  owner: String!   @index  # shares credited to / debited from
+
+  assets: BigInt!
+  shares: BigInt!
+
+  flowType: FlowType!
+
+  blockNumber: Int!  @index
+  timestamp: Int!    @index
+  txHash: String!
+}

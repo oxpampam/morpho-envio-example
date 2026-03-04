@@ -1,0 +1,64 @@
+name: morpho-curator-dashboard
+description: >
+  Index every MetaMorpho vault created via the Morpho factory on Ethereum and Base.
+  Tracks curator risk decisions (caps, reallocations), TVL snapshots, LP flows,
+  and red-flag signals (cap revocations, fee changes, high utilisation).
+
+# ── Field selection ──────────────────────────────────────────────────────────
+# transaction.hash is not included by default — opt in so our handlers can
+# build stable entity IDs from "{txHash}-{logIndex}".
+field_selection:
+  transaction_fields:
+    - hash
+
+# ── Shared contract definitions ───────────────────────────────────────────────
+# ABI, handler file and event list are declared once here; network sections
+# below only supply the chain-specific addresses (or none for dynamic contracts).
+contracts:
+  - name: MetaMorphoFactory
+    handler: src/EventHandlers.ts
+    events:
+      - event: "CreateMetaMorpho(address indexed metaMorpho, address indexed caller, address initialOwner, uint256 initialTimelock, address indexed asset, string name, string symbol, bytes32 salt)"
+
+  - name: MetaMorpho
+    handler: src/EventHandlers.ts
+    events:
+      # ── Curator / risk actions ──────────────────────────────────────────
+      - event: "SetCap(address indexed caller, bytes32 indexed id, uint256 cap)"
+      - event: "SubmitCap(address indexed caller, bytes32 indexed id, uint256 cap)"
+      - event: "RevokePendingCap(address indexed caller, bytes32 indexed id)"
+      # ── Allocator rebalancing ───────────────────────────────────────────
+      - event: "ReallocateSupply(address indexed caller, bytes32 indexed id, uint256 suppliedAssets, uint256 suppliedShares)"
+      - event: "ReallocateWithdraw(address indexed caller, bytes32 indexed id, uint256 withdrawnAssets, uint256 withdrawnShares)"
+      - event: "SetSupplyQueue(address indexed caller, bytes32[] newSupplyQueue)"
+      # ── TVL & snapshots ─────────────────────────────────────────────────
+      - event: "UpdateLastTotalAssets(uint256 updatedTotalAssets)"
+      # ── Fee changes (red-flag signal) ───────────────────────────────────
+      - event: "SetFee(address indexed caller, uint256 newFee)"
+      # ── LP flows (ERC-4626) ─────────────────────────────────────────────
+      - event: "Deposit(address indexed sender, address indexed owner, uint256 assets, uint256 shares)"
+      - event: "Withdraw(address indexed sender, address indexed receiver, address indexed owner, uint256 assets, uint256 shares)"
+
+# ── Networks ──────────────────────────────────────────────────────────────────
+networks:
+  # ── Ethereum Mainnet (chain 1) ────────────────────────────────────────────
+  - id: 1
+    start_block: 18900000  # MetaMorpho launch ~late 2023
+    contracts:
+      - name: MetaMorphoFactory
+        address:
+          - "0xa9c3d3a366466fa809d1ae982fb2c46e5fc41101"  # v1
+          - "0x1897a8997241c1cd4bd0698647e4eb7213535c24"  # v1.1
+      - name: MetaMorpho
+        # No address — registered dynamically via CreateMetaMorpho
+
+  # ── Base (chain 8453) ─────────────────────────────────────────────────────
+  - id: 8453
+    start_block: 13977000
+    contracts:
+      - name: MetaMorphoFactory
+        address:
+          - "0xa9c3d3a366466fa809d1ae982fb2c46e5fc41101"  # v1
+          - "0x1897a8997241c1cd4bd0698647e4eb7213535c24"  # v1.1
+      - name: MetaMorpho
+        # No address — registered dynamically via CreateMetaMorpho
