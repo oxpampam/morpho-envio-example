@@ -8,9 +8,7 @@
     "start": "envio start"
   },
   "dependencies": {
-    "generated": "workspace:*"
-  },
-  "devDependencies": {
+    "generated": "workspace:*",
     "envio": "2.32.3"
   }
 }
