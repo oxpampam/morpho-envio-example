@@ -1,0 +1,208 @@
+/* TypeScript file generated from Handlers.res by genType. */
+
+/* eslint-disable */
+/* tslint:disable */
+
+const HandlersJS = require('./Handlers.res.js');
+
+import type {HandlerTypes_eventConfig as Types_HandlerTypes_eventConfig} from './Types.gen';
+
+import type {MetaMorphoFactory_CreateMetaMorpho_eventFilters as Types_MetaMorphoFactory_CreateMetaMorpho_eventFilters} from './Types.gen';
+
+import type {MetaMorphoFactory_CreateMetaMorpho_event as Types_MetaMorphoFactory_CreateMetaMorpho_event} from './Types.gen';
+
+import type {MetaMorpho_Deposit_eventFilters as Types_MetaMorpho_Deposit_eventFilters} from './Types.gen';
+
+import type {MetaMorpho_Deposit_event as Types_MetaMorpho_Deposit_event} from './Types.gen';
+
+import type {MetaMorpho_ReallocateSupply_eventFilters as Types_MetaMorpho_ReallocateSupply_eventFilters} from './Types.gen';
+
+import type {MetaMorpho_ReallocateSupply_event as Types_MetaMorpho_ReallocateSupply_event} from './Types.gen';
+
+import type {MetaMorpho_ReallocateWithdraw_eventFilters as Types_MetaMorpho_ReallocateWithdraw_eventFilters} from './Types.gen';
+
+import type {MetaMorpho_ReallocateWithdraw_event as Types_MetaMorpho_ReallocateWithdraw_event} from './Types.gen';
+
+import type {MetaMorpho_RevokePendingCap_eventFilters as Types_MetaMorpho_RevokePendingCap_eventFilters} from './Types.gen';
+
+import type {MetaMorpho_RevokePendingCap_event as Types_MetaMorpho_RevokePendingCap_event} from './Types.gen';
+
+import type {MetaMorpho_SetCap_eventFilters as Types_MetaMorpho_SetCap_eventFilters} from './Types.gen';
+
+import type {MetaMorpho_SetCap_event as Types_MetaMorpho_SetCap_event} from './Types.gen';
+
+import type {MetaMorpho_SetFee_eventFilters as Types_MetaMorpho_SetFee_eventFilters} from './Types.gen';
+
+import type {MetaMorpho_SetFee_event as Types_MetaMorpho_SetFee_event} from './Types.gen';
+
+import type {MetaMorpho_SetSupplyQueue_eventFilters as Types_MetaMorpho_SetSupplyQueue_eventFilters} from './Types.gen';
+
+import type {MetaMorpho_SetSupplyQueue_event as Types_MetaMorpho_SetSupplyQueue_event} from './Types.gen';
+
+import type {MetaMorpho_SubmitCap_eventFilters as Types_MetaMorpho_SubmitCap_eventFilters} from './Types.gen';
+
+import type {MetaMorpho_SubmitCap_event as Types_MetaMorpho_SubmitCap_event} from './Types.gen';
+
+import type {MetaMorpho_UpdateLastTotalAssets_eventFilters as Types_MetaMorpho_UpdateLastTotalAssets_eventFilters} from './Types.gen';
+
+import type {MetaMorpho_UpdateLastTotalAssets_event as Types_MetaMorpho_UpdateLastTotalAssets_event} from './Types.gen';
+
+import type {MetaMorpho_Withdraw_eventFilters as Types_MetaMorpho_Withdraw_eventFilters} from './Types.gen';
+
+import type {MetaMorpho_Withdraw_event as Types_MetaMorpho_Withdraw_event} from './Types.gen';
+
+import type {chain as Types_chain} from './Types.gen';
+
+import type {contractRegistrations as Types_contractRegistrations} from './Types.gen';
+
+import type {fnWithEventConfig as Types_fnWithEventConfig} from './Types.gen';
+
+import type {genericContractRegisterArgs as Internal_genericContractRegisterArgs} from 'envio/src/Internal.gen';
+
+import type {genericContractRegister as Internal_genericContractRegister} from 'envio/src/Internal.gen';
+
+import type {genericHandlerArgs as Internal_genericHandlerArgs} from 'envio/src/Internal.gen';
+
+import type {genericHandlerWithLoader as Internal_genericHandlerWithLoader} from 'envio/src/Internal.gen';
+
+import type {genericHandler as Internal_genericHandler} from 'envio/src/Internal.gen';
+
+import type {genericLoaderArgs as Internal_genericLoaderArgs} from 'envio/src/Internal.gen';
+
+import type {genericLoader as Internal_genericLoader} from 'envio/src/Internal.gen';
+
+import type {handlerContext as Types_handlerContext} from './Types.gen';
+
+import type {loaderContext as Types_loaderContext} from './Types.gen';
+
+import type {onBlockArgs as Envio_onBlockArgs} from 'envio/src/Envio.gen';
+
+import type {onBlockOptions as Envio_onBlockOptions} from 'envio/src/Envio.gen';
+
+export const MetaMorpho_SetCap_contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_SetCap_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SetCap_eventFilters>> = HandlersJS.MetaMorpho.SetCap.contractRegister as any;
+
+export const MetaMorpho_SetCap_handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SetCap_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SetCap_eventFilters>> = HandlersJS.MetaMorpho.SetCap.handler as any;
+
+export const MetaMorpho_SetCap_handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_SetCap_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SetCap_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_SetCap_eventFilters>) => void = HandlersJS.MetaMorpho.SetCap.handlerWithLoader as any;
+
+export const MetaMorpho_SubmitCap_contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_SubmitCap_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SubmitCap_eventFilters>> = HandlersJS.MetaMorpho.SubmitCap.contractRegister as any;
+
+export const MetaMorpho_SubmitCap_handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SubmitCap_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SubmitCap_eventFilters>> = HandlersJS.MetaMorpho.SubmitCap.handler as any;
+
+export const MetaMorpho_SubmitCap_handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_SubmitCap_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SubmitCap_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_SubmitCap_eventFilters>) => void = HandlersJS.MetaMorpho.SubmitCap.handlerWithLoader as any;
+
+export const MetaMorpho_RevokePendingCap_contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_RevokePendingCap_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_RevokePendingCap_eventFilters>> = HandlersJS.MetaMorpho.RevokePendingCap.contractRegister as any;
+
+export const MetaMorpho_RevokePendingCap_handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_RevokePendingCap_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_RevokePendingCap_eventFilters>> = HandlersJS.MetaMorpho.RevokePendingCap.handler as any;
+
+export const MetaMorpho_RevokePendingCap_handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_RevokePendingCap_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_RevokePendingCap_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_RevokePendingCap_eventFilters>) => void = HandlersJS.MetaMorpho.RevokePendingCap.handlerWithLoader as any;
+
+export const MetaMorpho_ReallocateSupply_contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_ReallocateSupply_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_ReallocateSupply_eventFilters>> = HandlersJS.MetaMorpho.ReallocateSupply.contractRegister as any;
+
+export const MetaMorpho_ReallocateSupply_handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_ReallocateSupply_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_ReallocateSupply_eventFilters>> = HandlersJS.MetaMorpho.ReallocateSupply.handler as any;
+
+export const MetaMorpho_ReallocateSupply_handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_ReallocateSupply_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_ReallocateSupply_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_ReallocateSupply_eventFilters>) => void = HandlersJS.MetaMorpho.ReallocateSupply.handlerWithLoader as any;
+
+export const MetaMorpho_ReallocateWithdraw_contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_ReallocateWithdraw_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_ReallocateWithdraw_eventFilters>> = HandlersJS.MetaMorpho.ReallocateWithdraw.contractRegister as any;
+
+export const MetaMorpho_ReallocateWithdraw_handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_ReallocateWithdraw_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_ReallocateWithdraw_eventFilters>> = HandlersJS.MetaMorpho.ReallocateWithdraw.handler as any;
+
+export const MetaMorpho_ReallocateWithdraw_handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_ReallocateWithdraw_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_ReallocateWithdraw_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_ReallocateWithdraw_eventFilters>) => void = HandlersJS.MetaMorpho.ReallocateWithdraw.handlerWithLoader as any;
+
+export const MetaMorpho_SetSupplyQueue_contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_SetSupplyQueue_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SetSupplyQueue_eventFilters>> = HandlersJS.MetaMorpho.SetSupplyQueue.contractRegister as any;
+
+export const MetaMorpho_SetSupplyQueue_handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SetSupplyQueue_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SetSupplyQueue_eventFilters>> = HandlersJS.MetaMorpho.SetSupplyQueue.handler as any;
+
+export const MetaMorpho_SetSupplyQueue_handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_SetSupplyQueue_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SetSupplyQueue_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_SetSupplyQueue_eventFilters>) => void = HandlersJS.MetaMorpho.SetSupplyQueue.handlerWithLoader as any;
+
+export const MetaMorpho_UpdateLastTotalAssets_contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_UpdateLastTotalAssets_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_UpdateLastTotalAssets_eventFilters>> = HandlersJS.MetaMorpho.UpdateLastTotalAssets.contractRegister as any;
+
+export const MetaMorpho_UpdateLastTotalAssets_handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_UpdateLastTotalAssets_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_UpdateLastTotalAssets_eventFilters>> = HandlersJS.MetaMorpho.UpdateLastTotalAssets.handler as any;
+
+export const MetaMorpho_UpdateLastTotalAssets_handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_UpdateLastTotalAssets_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_UpdateLastTotalAssets_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_UpdateLastTotalAssets_eventFilters>) => void = HandlersJS.MetaMorpho.UpdateLastTotalAssets.handlerWithLoader as any;
+
+export const MetaMorpho_SetFee_contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_SetFee_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SetFee_eventFilters>> = HandlersJS.MetaMorpho.SetFee.contractRegister as any;
+
+export const MetaMorpho_SetFee_handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SetFee_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SetFee_eventFilters>> = HandlersJS.MetaMorpho.SetFee.handler as any;
+
+export const MetaMorpho_SetFee_handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_SetFee_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SetFee_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_SetFee_eventFilters>) => void = HandlersJS.MetaMorpho.SetFee.handlerWithLoader as any;
+
+export const MetaMorpho_Deposit_contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_Deposit_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_Deposit_eventFilters>> = HandlersJS.MetaMorpho.Deposit.contractRegister as any;
+
+export const MetaMorpho_Deposit_handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_Deposit_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_Deposit_eventFilters>> = HandlersJS.MetaMorpho.Deposit.handler as any;
+
+export const MetaMorpho_Deposit_handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_Deposit_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_Deposit_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_Deposit_eventFilters>) => void = HandlersJS.MetaMorpho.Deposit.handlerWithLoader as any;
+
+export const MetaMorpho_Withdraw_contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_Withdraw_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_Withdraw_eventFilters>> = HandlersJS.MetaMorpho.Withdraw.contractRegister as any;
+
+export const MetaMorpho_Withdraw_handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_Withdraw_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_Withdraw_eventFilters>> = HandlersJS.MetaMorpho.Withdraw.handler as any;
+
+export const MetaMorpho_Withdraw_handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_Withdraw_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_Withdraw_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_Withdraw_eventFilters>) => void = HandlersJS.MetaMorpho.Withdraw.handlerWithLoader as any;
+
+export const MetaMorphoFactory_CreateMetaMorpho_contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorphoFactory_CreateMetaMorpho_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorphoFactory_CreateMetaMorpho_eventFilters>> = HandlersJS.MetaMorphoFactory.CreateMetaMorpho.contractRegister as any;
+
+export const MetaMorphoFactory_CreateMetaMorpho_handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorphoFactory_CreateMetaMorpho_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorphoFactory_CreateMetaMorpho_eventFilters>> = HandlersJS.MetaMorphoFactory.CreateMetaMorpho.handler as any;
+
+export const MetaMorphoFactory_CreateMetaMorpho_handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorphoFactory_CreateMetaMorpho_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorphoFactory_CreateMetaMorpho_event,Types_handlerContext,loaderReturn>>,Types_MetaMorphoFactory_CreateMetaMorpho_eventFilters>) => void = HandlersJS.MetaMorphoFactory.CreateMetaMorpho.handlerWithLoader as any;
+
+/** Register a Block Handler. It'll be called for every block by default. */
+export const onBlock: (_1:Envio_onBlockOptions<Types_chain>, _2:((_1:Envio_onBlockArgs<Types_handlerContext>) => Promise<void>)) => void = HandlersJS.onBlock as any;
+
+export const MetaMorpho: {
+  Deposit: {
+    handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_Deposit_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_Deposit_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_Deposit_eventFilters>) => void; 
+    handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_Deposit_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_Deposit_eventFilters>>; 
+    contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_Deposit_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_Deposit_eventFilters>>
+  }; 
+  ReallocateWithdraw: {
+    handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_ReallocateWithdraw_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_ReallocateWithdraw_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_ReallocateWithdraw_eventFilters>) => void; 
+    handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_ReallocateWithdraw_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_ReallocateWithdraw_eventFilters>>; 
+    contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_ReallocateWithdraw_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_ReallocateWithdraw_eventFilters>>
+  }; 
+  SetSupplyQueue: {
+    handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_SetSupplyQueue_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SetSupplyQueue_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_SetSupplyQueue_eventFilters>) => void; 
+    handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SetSupplyQueue_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SetSupplyQueue_eventFilters>>; 
+    contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_SetSupplyQueue_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SetSupplyQueue_eventFilters>>
+  }; 
+  SetFee: {
+    handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_SetFee_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SetFee_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_SetFee_eventFilters>) => void; 
+    handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SetFee_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SetFee_eventFilters>>; 
+    contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_SetFee_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SetFee_eventFilters>>
+  }; 
+  Withdraw: {
+    handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_Withdraw_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_Withdraw_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_Withdraw_eventFilters>) => void; 
+    handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_Withdraw_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_Withdraw_eventFilters>>; 
+    contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_Withdraw_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_Withdraw_eventFilters>>
+  }; 
+  SetCap: {
+    handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_SetCap_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SetCap_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_SetCap_eventFilters>) => void; 
+    handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SetCap_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SetCap_eventFilters>>; 
+    contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_SetCap_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SetCap_eventFilters>>
+  }; 
+  RevokePendingCap: {
+    handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_RevokePendingCap_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_RevokePendingCap_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_RevokePendingCap_eventFilters>) => void; 
+    handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_RevokePendingCap_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_RevokePendingCap_eventFilters>>; 
+    contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_RevokePendingCap_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_RevokePendingCap_eventFilters>>
+  }; 
+  UpdateLastTotalAssets: {
+    handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_UpdateLastTotalAssets_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_UpdateLastTotalAssets_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_UpdateLastTotalAssets_eventFilters>) => void; 
+    handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_UpdateLastTotalAssets_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_UpdateLastTotalAssets_eventFilters>>; 
+    contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_UpdateLastTotalAssets_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_UpdateLastTotalAssets_eventFilters>>
+  }; 
+  SubmitCap: {
+    handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_SubmitCap_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SubmitCap_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_SubmitCap_eventFilters>) => void; 
+    handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_SubmitCap_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SubmitCap_eventFilters>>; 
+    contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_SubmitCap_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_SubmitCap_eventFilters>>
+  }; 
+  ReallocateSupply: {
+    handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorpho_ReallocateSupply_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_ReallocateSupply_event,Types_handlerContext,loaderReturn>>,Types_MetaMorpho_ReallocateSupply_eventFilters>) => void; 
+    handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorpho_ReallocateSupply_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_ReallocateSupply_eventFilters>>; 
+    contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorpho_ReallocateSupply_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorpho_ReallocateSupply_eventFilters>>
+  }
+} = HandlersJS.MetaMorpho as any;
+
+export const MetaMorphoFactory: { CreateMetaMorpho: {
+  handlerWithLoader: <loaderReturn>(_1:Internal_genericHandlerWithLoader<Internal_genericLoader<Internal_genericLoaderArgs<Types_MetaMorphoFactory_CreateMetaMorpho_event,Types_loaderContext>,loaderReturn>,Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorphoFactory_CreateMetaMorpho_event,Types_handlerContext,loaderReturn>>,Types_MetaMorphoFactory_CreateMetaMorpho_eventFilters>) => void; 
+  handler: Types_fnWithEventConfig<Internal_genericHandler<Internal_genericHandlerArgs<Types_MetaMorphoFactory_CreateMetaMorpho_event,Types_handlerContext,void>>,Types_HandlerTypes_eventConfig<Types_MetaMorphoFactory_CreateMetaMorpho_eventFilters>>; 
+  contractRegister: Types_fnWithEventConfig<Internal_genericContractRegister<Internal_genericContractRegisterArgs<Types_MetaMorphoFactory_CreateMetaMorpho_event,Types_contractRegistrations>>,Types_HandlerTypes_eventConfig<Types_MetaMorphoFactory_CreateMetaMorpho_eventFilters>>
+} } = HandlersJS.MetaMorphoFactory as any;
