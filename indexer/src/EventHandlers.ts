@@ -1,4 +1,4 @@
-import { MetaMorphoFactory, MetaMorpho } from "generated";
+import { MetaMorphoFactory, MetaMorpho } from "../generated";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
