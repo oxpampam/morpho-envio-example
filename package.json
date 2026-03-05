@@ -1,14 +1,9 @@
 {
-  "name": "morpho-curator-dashboard",
+  "name": "morpho-envio-example",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "codegen": "envio codegen",
-    "dev": "envio dev",
-    "start": "envio start"
-  },
-  "dependencies": {
-    "generated": "workspace:*",
-    "envio": "2.32.3"
+    "dev:indexer": "pnpm --filter morpho-indexer dev",
+    "dev:dashboard": "pnpm --filter dashboard dev"
   }
 }

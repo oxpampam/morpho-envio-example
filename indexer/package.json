@@ -1,0 +1,14 @@
+{
+  "name": "morpho-indexer",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "codegen": "envio codegen",
+    "dev": "envio dev",
+    "start": "envio start"
+  },
+  "dependencies": {
+    "envio": "2.32.3",
+    "generated": "workspace:*"
+  }
+}
